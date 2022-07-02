@@ -87,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void getCurrencyData() {
         loadingPB.setVisibility(View.VISIBLE);
+        //Api link to fetch all the crypto 
         String url = "https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest";
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
